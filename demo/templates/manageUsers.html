@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<!--
+	License: pixelarity.com/license
+-->
+<html>
+	<head>
+		<title>電機通訊專題成果展 - 報名管理</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="國立中正大學電機、通訊系專題成果展。" />
+		<meta name="keywords" content="專題成果展, 國立中正大學, 電機工程學系, 通訊工程學系" />
+		<meta name="author" content="Power Wu"/>
+		<meta property="og:url" content="http://exhibition.ee.ccu.edu.tw/" />
+		<meta property="og:title" content="電機通訊專題成果展 - 國立中正大學電機工程學系" />
+		<meta property="og:description" content="國立中正大學電機、通訊系專題成果展。" />
+		<meta property="og:image" content="http://exhibition.ee.ccu.edu.tw/images/banner.jpg" />
+		
+		<link rel="stylesheet" href="assets/main/css/main.css" />
+		<!--[if lte IE 8]><script src="assets/main/js/ie/html5shiv.js"></script><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/main/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/main/css/ie8.css" /><![endif]-->
+		<link href="images/banner.jpg" rel="image_src" type="image/jpeg">
+	</head>
+	<body>
+
+
+			<div id="page-wrapper">
+
+
+					<header id="header">
+						<span class="logo"><a href="index.php">電機／通訊專題成果展</a></span>
+{if $user != ""}
+						<span class="user">{$user}</span>
+{/if}
+						<a href="#menu">選單</a>
+					</header>
+
+
+
+					<nav id="menu">
+						<div class="inner">
+							<h2>選單</h2>
+							<ul class="links">
+{foreach item=i from=$arrMenu}
+								<li><a href="{$i.url}">{$i.content}</a></li>
+{/foreach}							</ul>
+							<a class="close"></a>
+						</div>
+					</nav>
+
+
+
+
+					<section id="main" class="wrapper alt">
+						<div class="inner">
+
+							<header class="major special">
+								<p>報名管理</p>
+								<h1>專題成果展系統</h1>
+							</header>
+{if $numNotVerified == 0 && $numVerified == 0}
+							<p>尚無資料。</p>
+
+{/if}
+{if $numNotVerified != 0}
+							<div class="table-wrapper">
+								<h2>尚未審核</h2>
+								<table id="tableNotVerified">
+									<thead>
+										<tr>
+											<th>隊伍名稱</th>
+											<th>隊長</th>
+											<th>成員</th>
+											<th>指導教授</th>
+											<th>需求</th>
+											<th>報名時間</th>
+											<th>審核管理</th>
+										</tr>
+									</thead>
+									<tbody>
+{foreach item=i from=$arrNotVerified}
+										<tr>
+											<td><div class="subtitle">【{$i.group}】</div><div class="maintitle">{$i.group_name}</div></td>
+											<td>{$i.leader}</td>
+											<td>{$i.members}</td>
+											<td>{$i.professor}</td>
+											<td>{$i.needs}</td>
+											<td>{$i.timeSignup}</td>
+											<td>
+												<a href="#" class="button special small">確認報名</a>
+												<!--<a href="#" class="button small">刪除</a>-->
+											</td>
+										</tr>
+{/foreach}
+									</tbody>										
+									<tfoot>
+										<tr>
+											<td>總計：<span id="numNotVerified">{$numNotVerified}</span>組</td>
+											<td colspan="4"></td>
+										</tr>
+									</tfoot>								
+								</table>
+							</div>
+{/if}
+
+{if $numVerified != 0}
+							<div class="table-wrapper">
+								<h2>審核完畢</h2>
+								<table id="tableVerified">
+									<thead>
+										<tr>
+											<th>隊伍名稱</a></th>
+											<th>隊長</th>
+											<th>成員</th>
+											<th>指導教授</th>
+											<th>需求</th>
+											<th>報名時間</th>
+											<!--<th>審核管理</th>-->
+										</tr>
+									</thead>
+									<tbody>
+{foreach item=i from=$arrVerified}
+										<tr>
+											<td><div class="subtitle">【{$i.group}】</div><div class="maintitle">{$i.group_name}</div></td>
+											<td>{$i.leader}</td>
+											<td>{$i.members}</td>
+											<td>{$i.professor}</td>
+											<td>{$i.needs}</td>
+											<td>{$i.timeSignup}</td>
+											<!--<td>
+												<a href="#" class="button small">刪除</a>
+											</td>-->
+										</tr>
+{/foreach}
+									</tbody>									
+									<tfoot>
+										<tr>
+											<td>總計：<span id="numVerified">{$numVerified}組</span></td>
+											<td colspan="4"></td>
+										</tr>
+									</tfoot>									
+								</table>
+							</div>
+{/if}
+
+
+
+						</div>
+					</section>
+
+					<footer id="footer">
+						<div class="inner alt">
+						</div>
+						<div class="copyright">
+							<ul class="actions">
+								<li><a id="backToHome" href="main.php" class="button special icon fa-home">回首頁</a></li>
+							</ul>
+							<span>&copy; 國立中正大學 電機工程學系 | 由<a href="http://powerstudio.azurewebsites.net" target="_blank">PowerStudio</a>架設</span>
+						</div>
+					</footer>
+			
+			
+
+			</div>
+
+
+			<script src="assets/main/js/jquery.min.js"></script>
+			<script src="assets/main/js/skel.min.js"></script>
+			<script src="assets/main/js/util.js"></script>
+			<script src="assets/main/js/jquery.scrollex.min.js"></script>
+			<script src="assets/main/js/jquery.scrolly.min.js"></script>
+			<!--[if lte IE 8]><script src="assets/main/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/main/js/main.js"></script>
+			<script src="assets/main/js/manage.js"></script>
+
+	</body>
+</html>

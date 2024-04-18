@@ -1,0 +1,247 @@
+<?php
+/* Smarty version 5.0.0, created on 2024-04-08 05:27:26
+  from 'file:signup.html' */
+
+/* @var \Smarty\Template $_smarty_tpl */
+if ($_smarty_tpl->getCached()->isFresh($_smarty_tpl, array (
+  'version' => '5.0.0',
+  'unifunc' => 'content_6613803e8daa62_19081404',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'd1f2c339ecc4472ff7c098d1a96d7e79cce02b41' => 
+    array (
+      0 => 'signup.html',
+      1 => 1712236690,
+      2 => 'file',
+    ),
+  ),
+  'cache_lifetime' => 1,
+))) {
+function content_6613803e8daa62_19081404 (\Smarty\Template $_smarty_tpl) {
+$_smarty_current_dir = 'C:\\wamp64\\www\\demo\\templates';
+?><!DOCTYPE HTML>
+<!--
+	License: pixelarity.com/license
+-->
+<html>
+	<head>
+		<title>電機通訊專題成果展 - 報名</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="國立中正大學電機、通訊系專題成果展。" />
+		<meta name="keywords" content="專題成果展, 國立中正大學, 電機工程學系, 通訊工程學系" />
+		<meta name="author" content="Power Wu"/>
+		<meta property="og:url" content="http://exhibition.ee.ccu.edu.tw/" />
+		<meta property="og:title" content="電機通訊專題成果展 - 國立中正大學電機工程學系" />
+		<meta property="og:description" content="國立中正大學電機、通訊系專題成果展。" />
+		<meta property="og:image" content="http://exhibition.ee.ccu.edu.tw/images/banner.jpg" />
+		
+		<link rel="stylesheet" href="assets/main/css/main.css" />
+		<!--[if lte IE 8]><script src="assets/main/js/ie/html5shiv.js"></script><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/main/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/main/css/ie8.css" /><![endif]-->
+		<link href="images/banner.jpg" rel="image_src" type="image/jpeg">
+	</head>
+	<body>
+
+
+			<div id="page-wrapper">
+
+					<header id="header">
+						<span class="logo"><a href="index.php">電機／通訊專題成果展</a></span>
+						<a href="#menu">選單</a>
+					</header>
+
+
+					<nav id="menu">
+						<div class="inner">
+							<h2>選單</h2>
+							<ul class="links">
+								<li><a href="page1.html">頁面 1</a></li>
+								<li><a href="page2.html">頁面 2</a></li>
+								<li><a href="page3.html">頁面 3</a></li>
+								<li><a href="page4.html">頁面 4</a></li>
+							</ul>
+							<a class="close"></a>
+						</div>
+					</nav>
+
+
+
+
+					<section id="main" class="wrapper alt">
+						<div class="inner">
+
+							<header class="major special">
+								<p>報名</p>
+								<h1>專題成果展系統</h1>
+							</header>
+
+		
+							<form id="signUp" method="post" action="sign.php">
+								<div class="row uniform">
+									<div class="4u 10u$(medium) 12u$(xsmall)">
+										<h4>報名隊伍</h4>
+										<input type="text" name="group-name" id="group-name" value="" placeholder="隊伍名稱(不可有特殊字元)" /></br>
+										<input type="password" name="password" id="password" value="" placeholder="密碼(16位英數字為限)" /></br>
+										<input type="password" name="password-re" id="password-re" value="" placeholder="確認密碼" /></br>	
+										<textarea name="project" id="project" value="" placeholder="專題名稱" rows="3" /></textarea></br>	
+										<input type="text" name="professor" id="professor" value="" placeholder="指導教授" /></br>										
+										<div class="select-wrapper">
+											<select name="project-institute" id="project-institute">
+												<option value="">- 專題組別 -</option>
+												<option value="1">資訊</option>
+												<option value="2">控制</option>
+												<option value="3">通訊</option>
+											</select>
+										</div>											
+									</div>
+									<div class="8u 10u$(medium) 12u$(xsmall)">
+										<div class="row">
+											<div id="leader" class="4u 12u$(medium) 12u$(xsmall)">	
+												<h4>隊長</h4>
+												<input type="text" name="leader-name" id="leader-name" value="" placeholder="隊長名字" /></br>
+												<input type="text" name="leader-id" id="leader-id" value="" placeholder="隊長學號" /></br>		
+												<input type="email" name="leader-email" id="leader-email" value="" placeholder="隊長e-mail" /></br>	
+												<input type="text" name="leader-phone" id="leader-phone" value="" placeholder="隊長聯絡電話" /></br>										
+												<div class="select-wrapper">
+													<select name="leader-depart" id="leader-depart">
+														<option value="">- 系別 -</option>
+														<option value="電機系">電機系</option>
+														<option value="通訊系">通訊系</option>
+													</select>
+												</div></br>	
+											</div>
+											<div id="memberOne" class="4u 12u$(medium) 12u$(xsmall)">	
+												<h4>成員一</h4>
+												<input type="text" name="memberOne-name" id="memberOne-name" value="" placeholder="名字" /></br>
+												<input type="text" name="memberOne-id" id="memberOne-id" value="" placeholder="學號" /></br>	
+												<input type="email" name="memberOne-email" id="memberOne-email" value="" placeholder="e-mail" /></br>	
+												<input type="text" name="memberOne-phone" id="memberOne-phone" value="" placeholder="聯絡電話" /></br>											
+												<div class="select-wrapper">
+													<select name="memberOne-depart" id="memberOne-depart">
+														<option value="">- 系別 -</option>
+														<option value="電機系">電機系</option>
+														<option value="通訊系">通訊系</option>
+													</select>
+												</div></br>	
+											</div>		
+											<div id="memberTwo" class="4u 12u$(medium) 12u$(xsmall)">	
+												<h4>成員二</h4>
+												<input type="text" name="memberTwo-name" id="memberTwo-name" value="" placeholder="名字" /></br>
+												<input type="text" name="memberTwo-id" id="memberTwo-id" value="" placeholder="學號" /></br>	
+												<input type="email" name="memberTwo-email" id="memberTwo-email" value="" placeholder="e-mail" /></br>	
+												<input type="text" name="memberTwo-phone" id="memberTwo-phone" value="" placeholder="聯絡電話" /></br>
+												<div class="select-wrapper">
+													<select name="memberTwo-depart" id="memberTwo-depart">
+														<option value="">- 系別 -</option>
+														<option value="電機系">電機系</option>
+														<option value="通訊系">通訊系</option>
+													</select>
+												</div></br>	
+											</div>		
+										</div>
+										<div class="row">
+											<div id="memberThree" class="4u 12u$(medium) 12u$(xsmall)">	
+												<h4>成員三</h4>
+												<input type="text" name="memberThree-name" id="memberThree-name" value="" placeholder="名字" /></br>
+												<input type="text" name="memberThree-id" id="memberThree-id" value="" placeholder="學號" /></br>	
+												<input type="email" name="memberThree-email" id="memberThree-email" value="" placeholder="e-mail" /></br>	
+												<input type="text" name="memberThree-phone" id="memberThree-phone" value="" placeholder="聯絡電話" /></br>											
+												<div class="select-wrapper">
+													<select name="memberThree-depart" id="memberThree-depart">
+														<option value="">- 系別 -</option>
+														<option value="電機系">電機系</option>
+														<option value="通訊系">通訊系</option>
+													</select>
+												</div></br>	
+											</div>
+											<div id="memberFour" class="4u 12u$(medium) 12u$(xsmall)">	
+												<h4>成員四</h4>
+												<input type="text" name="memberFour-name" id="memberFour-name" value="" placeholder="名字" /></br>
+												<input type="text" name="memberFour-id" id="memberFour-id" value="" placeholder="學號" /></br>	
+												<input type="email" name="memberFour-email" id="memberFour-email" value="" placeholder="e-mail" /></br>	
+												<input type="text" name="memberFour-phone" id="memberFour-phone" value="" placeholder="聯絡電話" /></br>											
+												<div class="select-wrapper">
+													<select name="memberFour-depart" id="memberFour-depart">
+														<option value="">- 系別 -</option>
+														<option value="電機系">電機系</option>
+														<option value="通訊系">通訊系</option>
+													</select>
+												</div></br>	
+											</div>
+											<div id="memberFive" class="4u 12u$(medium) 12u$(xsmall)">	
+												<h4>成員五</h4>
+												<input type="text" name="memberFive-name" id="memberFive-name" value="" placeholder="名字" /></br>
+												<input type="text" name="memberFive-id" id="memberFive-id" value="" placeholder="學號" /></br>	
+												<input type="email" name="memberFive-email" id="memberFive-email" value="" placeholder="e-mail" /></br>	
+												<input type="text" name="memberFive-phone" id="memberFive-phone" value="" placeholder="聯絡電話" /></br>											
+												<div class="select-wrapper">
+													<select name="memberFive-depart" id="memberFive-depart">
+														<option value="">- 系別 -</option>
+														<option value="電機系">電機系</option>
+														<option value="通訊系">通訊系</option>
+													</select>
+												</div></br>	
+											</div>
+										</div>
+									</div>
+
+								
+									<div class="12u">
+
+										<div class="row">										
+											<div class="6u 10u$(medium) 12u$(small)">
+												<!-- Need -->
+												<span>需求：</span></br>
+												<input type="radio" id="group-need-poster" name="group-need" value="0" checked>
+												<label for="group-need-poster">無</label>
+												<input type="radio" id="group-need-table" name="group-need" value="1">
+												<label for="group-need-table">桌子</label>
+												<input type="radio" id="group-need-powersupply" name="group-need" value="2">
+												<label for="group-need-powersupply">桌子和電源</label>
+												<!-- Competition -->
+												<input type="checkbox" id="competition" name="competition" value="參賽" >
+												<label for="competition">參加校外評選競賽（需教授推薦）</label>
+											</div>
+										</div>
+										<div class="g-recaptcha" data-sitekey="your_site_key_here" data-callback="your_callback_function_here" data-expired-callback="your_expired_callback_function_here"></div></br>
+										<ul class="actions">
+											<li><input type="submit" value="報名" class="button special disabled" id="btnSignUp"/></li>
+											<li><input type="reset" value="重新輸入" class="alt" id="btnReset" /></li>
+											<li class="checkStatus" id="errorMessage"></li>
+										</ul>
+									</div>
+								</div>
+							</form>
+
+						</div>
+
+					</section>	
+						
+					<footer id="footer">
+						<div class="inner alt">
+						</div>
+						<div class="copyright">
+							<span>&copy; 國立中正大學 電機工程學系 | 由<a href="http://powerstudio.azurewebsites.net" target="_blank">PowerStudio</a>架設</span>
+						</div>
+					</footer>
+			
+
+			</div>
+
+
+			<script src="assets/main/js/jquery.min.js"></script>
+			<script src="assets/main/js/skel.min.js"></script>
+			<script src="assets/main/js/util.js"></script>
+			<script src="assets/main/js/jquery.scrollex.min.js"></script>
+			<script src="assets/main/js/jquery.scrolly.min.js"></script>
+			<!--[if lte IE 8]><script src="assets/main/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/main/js/main.js"></script>
+			<script src="assets/main/js/signup.js"></script>
+			<script src='https://www.google.com/recaptcha/api.js?h1=zh-TW'></script>
+
+	</body>
+</html><?php }
+}

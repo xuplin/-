@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<!--
+	License: pixelarity.com/license
+-->
+<html>
+	<head>
+		<title>電機通訊專題成果展 - 成果展示</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="國立中正大學電機、通訊系專題成果展。" />
+		<meta name="keywords" content="專題成果展, 國立中正大學, 電機工程學系, 通訊工程學系" />
+		<meta name="author" content="Power Wu"/>
+		<meta property="og:url" content="http://exhibition.ee.ccu.edu.tw/" />
+		<meta property="og:title" content="電機通訊專題成果展 - 國立中正大學電機工程學系" />
+		<meta property="og:description" content="國立中正大學電機、通訊系專題成果展。" />
+		<meta property="og:image" content="http://exhibition.ee.ccu.edu.tw/images/banner.jpg" />
+		
+		<link rel="stylesheet" href="assets/main/css/main.css" />
+		<!--[if lte IE 8]><script src="assets/main/js/ie/html5shiv.js"></script><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/main/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/main/css/ie8.css" /><![endif]-->
+		<link href="images/banner.jpg" rel="image_src" type="image/jpeg">
+	</head>
+	<body>
+
+
+			<div id="page-wrapper">
+
+					<header id="header">
+						<span class="logo"><a href="index.php">電機／通訊專題成果展</a></span>
+{if $user != ""}
+						<span class="user">{$user}</span>
+{/if}
+						<a href="#menu">選單</a>
+					</header>
+
+
+
+					<nav id="menu">
+						<div class="inner">
+							<h2>選單</h2>
+							<ul class="links">
+{foreach item=i from=$arrMenu}
+								<li><a href="{$i.url}">{$i.content}</a></li>
+{/foreach}							</ul>
+							<a class="close"></a>
+						</div>
+					</nav>
+
+
+
+					<img id="loading">
+					<section id="main" class="wrapper alt">	
+						<div class="inner">
+							<header class="major special">
+								<p>成果展示</p>
+								<h1>{$year}專題成果展系統</h1>
+							</header>
+
+
+							<div class="row">
+{foreach item=i from=$departGroup}
+								<div class="3u 6u(medium) 12u(small)">
+									<h3 class="depart title"><a id="btn_depart_group_{$i.id}" href="#">{$i.name}</a><span class="badge">{$i.count}</span></h3>
+								</div>
+{/foreach}
+							</div>
+
+
+							<div class="poster main">
+{for $index = 1 to 8}
+								<div id="depart_group_{$index}" class="row poster">	
+{foreach item=g from=$group[$index - 1]}								
+									<div class="4u 6u(medium) 12u$(small)">	
+										<div class="div poster">					
+											<div class="box">
+												<h3>{$g.name}</h3>
+												<img class="img-poster" src="upload/{$year}/{$g.name}/poster.jpg" width="100%">
+												<p class="poster project">{$g.project}</p>
+												<p class="poster member">指導教授：{$g.professor}</br>隊長：{$g.leader}{if $g.students != ""}</br>成員：{$g.students}{/if}</p>
+												<ul class="actions">
+													<li><a class="button special icon fa-file-pdf-o" href="upload/{$year}/{$g.name}/poster.pdf" target="_blank">海報</a></li>
+												</ul>
+											</div>	
+										</div>
+									</div>
+{/foreach}					
+								</div>
+{/for}
+							</div>
+						</div>
+					</section>
+=
+					<footer id="footer">
+						<div class="inner alt">
+						</div>
+						<div class="copyright">
+							<ul class="actions">
+								<li><a href="main.php" class="button special icon fa-home">回首頁</a></li>
+							</ul>
+							<span>&copy; 國立中正大學 電機工程學系 | 由<a href="http://powerstudio.azurewebsites.net" target="_blank">PowerStudio</a>架設</span>
+						</div>
+					</footer>
+
+			</div>
+
+
+			<script src="assets/main/js/jquery.min.js"></script>
+			<script src="assets/main/js/skel.min.js"></script>
+			<script src="assets/main/js/util.js"></script>
+			<script src="assets/main/js/jquery.scrollex.min.js"></script>
+			<script src="assets/main/js/jquery.scrolly.min.js"></script>
+			<!--[if lte IE 8]><script src="assets/main/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/main/js/main.js"></script>
+			<script src="assets/main/js/posters.js"></script>
+
+
+
+
+	</body>
+</html>
